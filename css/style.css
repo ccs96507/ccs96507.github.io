@@ -1150,6 +1150,13 @@
 	  overflow: hidden; }
 	  .form-group:last-child {
 		margin-bottom: 0px; }
+	
+	.foghe {
+	  position: relative;
+	  margin-bottom: 25px;
+	  overflow: hidden; }
+	.foghe:last-child {
+		margin-bottom: 0px; }
 	figure {
 	  margin-bottom: 20px;
 	  text-align: center; }
