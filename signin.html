@@ -7,6 +7,7 @@
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		
+		    <script src='js/jquery.min.js'></script>
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
 			<link rel="stylesheet" href="css/style-xlarge.css" />
@@ -39,14 +40,16 @@
 
 						<div class="signin-form">
 							<h2 class="form-title">登入</h2>
-							<form method="POST" class="register-form" id="login-form">
+							<form id="register_form" role="form" data-toggle="validator">
 								<div class="form-group">
 									<label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-									<input type="text" name="your_name" id="your_name" placeholder="帳號"/>
+									<input type="text" name="your_name" id="your_name" placeholder="帳號"/ required="required">
+									<div  class="help-block with-errors messages" ></div>
 								</div>
 								<div class="form-group">
 									<label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
-									<input type="password" name="your_pass" id="your_pass" placeholder="密碼"/>
+									<input type="password" name="your_pass" id="your_pass" placeholder="密碼"/ required="required">
+									<div  class="help-block with-errors messages" ></div>
 								</div>
 								<div class="form-group">
 									<input type="checkbox" name="remember-me" id="remember-me" class="agree-term" />
@@ -61,7 +64,20 @@
 				</div>
 		
 		</div>
-	
+		<!--引用 Validator-->
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
+
+			<!--執行 Validator-->
+			<script>
+			$('#register_form').validator().on('submit', function(e) {
+			if (e.isDefaultPrevented()) { // 未驗證通過 則不處理
+			return;
+			} else { // 通过后，送出表单
+			alert("成功註冊");
+			}
+			e.preventDefault(); // 防止原始 form 提交表单
+			});
+			</script>
 
 
 	</body>
