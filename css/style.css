@@ -1146,7 +1146,7 @@
 	  
 	 .form-group {
 	  position: relative;
-	  margin-bottom: 25px;
+	  margin-bottom: 0px;
 	  overflow: hidden; }
 	  .form-group:last-child {
 		margin-bottom: 0px; }
@@ -1178,8 +1178,6 @@
 	.messages{
 	  color: #dc3545
 	}
-	.list-unstyled{
-		margin:0
-	}
+
 
 		
