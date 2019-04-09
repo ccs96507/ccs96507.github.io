@@ -27,8 +27,8 @@
 	<body class="w3-chinese">
 	<!--header-->
 		<div class="w3-top ">
-			<div class="w3-bar w3-white w3-card w3-padding w3-hide-small">
-				
+			<div class="w3-bar w3-white w3-card w3-padding ">
+				<a class="w3-bar-item w3-button w3-white w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
 				<a href="#" class="w3-bar-item w3-left   w3-large">NKUST</a>
 				<a href="#" class="w3-bar-item w3-right w3-button w3-large w3-round-xxlarge w3-light-blue w3-hide-small w3-text-white" >登入</a>
 				<a href="#" class="w3-bar-item w3-right w3-button w3-large w3-hide-small">頁面 1</a>
@@ -37,14 +37,21 @@
 
 
 			</div>
-			<a class="w3-bar-item w3-button w3-white w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+			
+		</div>
+	<!-- header on small screens  -->
+		<div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+		  <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">登入</a>
+		  <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">頁面 1</a>
+		  <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">頁面 2</a>
+		  <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">頁面 3</a>
 		</div>
 	<!--main-->
 		<div class=" bgimg w3-display-container w3-center" >
 
 			<div class="w3-display-middle w3-container w3-text-white  " style="width:100%" >
 			
-			  <h1 class="w3-hide-small w3-jumbo ">歡迎加入</h1>
+			  <h1 class=" w3-jumbo ">歡迎加入</h1>
 			  </br>
 			  <h5><b>網路影音合租平台</b></h5>   
 			  </br>
@@ -64,5 +71,36 @@
 		  <i class="fa fa-linkedin w3-hover-opacity"></i>
 		  <p class="w3-medium">make by Daniel</p>
 		</footer>
-	
+		
+		
+		
+		
+		
+		
+		
+		
+		<script>
+			
+
+			// Used to toggle the menu on small screens when clicking on the menu button
+			function myFunction() {
+			  var x = document.getElementById("navDemo");
+			  if (x.className.indexOf("w3-show") == -1) {
+				x.className += " w3-show";
+			  } else { 
+				x.className = x.className.replace(" w3-show", "");
+			  }
+			}
+
+			
+		</script>
+		
+		
+		
+		
+		
+		
+		
+		
+	</body>
 </html>
