@@ -1,0 +1,46 @@
+doctype html
+html
+  head
+    title= title
+    meta(http-equiv='content-type', content='text/html; charset=utf-8')
+    link(rel='stylesheet', href='stylesheets/style.css')
+
+    link(rel='stylesheet', href='https://www.w3schools.com/w3css/4/w3.css')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    script(src='javascripts/myjs.js')
+
+  body.w3-chinese
+    // header
+    .w3-top
+      .w3-bar.w3-white.w3-card.w3-padding
+        a.w3-bar-item.w3-button.w3-white.w3-padding-large.w3-hide-medium.w3-hide-large.w3-right(href='javascript:void(0)', onclick='myFunction()', title='Toggle Navigation Menu')
+          i.fa.fa-bars
+        a.w3-bar-item.w3-left.w3-large(href='#') NKUST
+        if isLogin === true
+          a.w3-bar-item.w3-right.w3-button.w3-large.w3-round-xxlarge.w3-light-blue.w3-hide-small.w3-text-white(href='/logout') 登出
+        else
+          a.w3-bar-item.w3-right.w3-button.w3-large.w3-round-xxlarge.w3-light-blue.w3-hide-small.w3-text-white(href='/login') 登入
+        a.w3-bar-item.w3-right.w3-button.w3-large.w3-hide-small(href='#') 頁面 1
+        a.w3-bar-item.w3-right.w3-button.w3-large.w3-hide-small(href='#') 頁面 2
+        a.w3-bar-item.w3-right.w3-button.w3-large.w3-hide-small(href='#') 頁面 3
+    // header on small screens
+    #navDemo.w3-bar-block.w3-white.w3-hide.w3-hide-large.w3-hide-medium.w3-top(style='margin-top:46px')
+      if isLogin === true
+        a.w3-bar-item.w3-button.w3-padding-large(href='/index', onclick='myFunction()') 登出
+      else
+        a.w3-bar-item.w3-button.w3-padding-large(href='/login', onclick='myFunction()') 登入
+      a.w3-bar-item.w3-button.w3-padding-large(href='#', onclick='myFunction()') 頁面 1
+      a.w3-bar-item.w3-button.w3-padding-large(href='#', onclick='myFunction()') 頁面 2
+      a.w3-bar-item.w3-button.w3-padding-large(href='#', onclick='myFunction()') 頁面 3
+
+    block content
+    block foot
+      footer.w3-container.w3-padding-64.w3-center.w3-opacity.w3-light-grey.w3-xlarge
+        i.fa.fa-facebook-official.w3-hover-opacity
+        i.fa.fa-instagram.w3-hover-opacity
+        i.fa.fa-snapchat.w3-hover-opacity
+        i.fa.fa-pinterest-p.w3-hover-opacity
+        i.fa.fa-twitter.w3-hover-opacity
+        i.fa.fa-linkedin.w3-hover-opacity
+        p.w3-medium make by Daniel
