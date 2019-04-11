@@ -7,6 +7,8 @@
 	
 	.bgimg {
 	  background-image: url('../images/bk4.jpg');
+	  background-image: linear-gradient(to bottom, rgba(255,255,255,0.8) 100%,rgba(144,144,144,0.9) 100%), url('../images/bk4.jpg');
+	  
 	  min-height: 105%;
 	  background-position: center;
 	  background-size: cover;
@@ -15,7 +17,7 @@
 	  align-items: center;
 	  
 	}
-	
+
 	.bgimg2 {
 	  background-image: url('../images/sign2.png');
 	  height: 100%
@@ -39,11 +41,4 @@
 		top: -1px;
 		 
 	}
-	.in-middle
-	{
-	  
-	 margin: 0 auto;
-    
-		
-		
-	}
+	
